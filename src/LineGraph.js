@@ -61,7 +61,7 @@ function LineGraph() {
                         data: graphData,
                         // data: sample_data.Values,
                         backgroundColor: "white",
-                        borderColor:"violet",
+                        borderColor:"blue",
                         borderWith:2,
                         pointBorderColor:'rgba(0,0,0,0)',
                         pointHoverBackgroundColor: 'rgba(0,0,0,0)',
@@ -73,6 +73,7 @@ function LineGraph() {
             }}
 
             options={{
+                maintainAspectRatio: false, 
                 responsive:true,
                 adapters: {
                     type: 'time',
@@ -104,12 +105,18 @@ function LineGraph() {
                             format: 'MM/DD/YY',
                             tooltipFormat: "ll",
                         },
+                        grid: {
+                            display: false, 
+                        },
                         ticks: {
                             display:false
                         },
                         
                     },
                     y: {
+                        grid: {
+                            display: false, 
+                        },
                         ticks: {
                             display: false
                         }

@@ -2,6 +2,10 @@
   text-align: center;
 }
 
+* {
+  margin:0; 
+}
+
 body {
   background-color: white;
 }
@@ -14,7 +18,7 @@ body {
 }
 
 .app__container {
-  background-color: #242472;
+  /* background-color: #242472; */
   width: 1024px;
   height: 100%;
   display: flex;

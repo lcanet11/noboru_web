@@ -15,10 +15,10 @@ function Header() {
         </div>
 
         <div className="header__menuItems">
-            <a href="#">Free Stocks</a>
             <a href="#">Portfolio</a>
-            <a href="#">Cash</a>
-            <a href="#">Messages</a>
+            <a href="#">FinTok</a>
+            <a href="#">ETFs</a>
+            <a href="#">Mutual Funds</a>
             <a href="#">Account</a>
         </div>
 
