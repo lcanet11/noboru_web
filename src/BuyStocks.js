@@ -5,28 +5,37 @@ import { db } from './firebase';
 function BuyStocks() {
   const collectionRef = db.collection('myStocks');
 
-  const buyStock = async (ticker) => {
+  const buyStock = async (ticker, shares) => {
     try {
-      // Add the ticker to the 'myStocks' collection
-      await collectionRef.add({ ticker });
-      console.log('Ticker added successfully!');
-      // You can also reset the ticker input field after adding the ticker
+      // Add the ticker and shares to the 'myStocks' collection
+      await collectionRef.add({ ticker, shares });
+      console.log('Stock added successfully!');
+      // Reset the input fields after adding the stock
       setTicker('');
+      setShares('');
     } catch (error) {
-      console.error('Error adding ticker:', error);
+      console.error('Error adding stock:', error);
     }
   };
 
   const handleChange = (event) => {
-    setTicker(event.target.value);
+    const { id, value } = event.target;
+
+    // Update the state based on the input field id
+    if (id === 'ticker') {
+      setTicker(value);
+    } else if (id === 'shares') {
+      setShares(value);
+    }
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    buyStock(ticker);
+    buyStock(ticker, shares);
   };
 
   const [ticker, setTicker] = useState('');
+  const [shares, setShares] = useState('');
 
   return (
     <main className="buystocks_container">
@@ -39,6 +48,16 @@ function BuyStocks() {
           onChange={handleChange}
           placeholder="Enter Ticker Symbol"
         />
+
+        <input
+          className="buystocks_shares_bar"
+          value={shares}
+          type="text"
+          id="shares"
+          onChange={handleChange}
+          placeholder="Enter # of Shares"
+        />
+
         <br />
         <button className="buystocks_button" type="submit">
           Buy

@@ -23,9 +23,8 @@
 
 .buystocks_shares_bar {
     width: 200px;
-    height: 5px;
-    font-weight: bold;
-
+    height: 18px;
+    font-weight: bold;  
 }
 
 .buystocks_button {
