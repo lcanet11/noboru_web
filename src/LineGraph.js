@@ -62,7 +62,7 @@ function LineGraph() {
                         // data: sample_data.Values,
                         backgroundColor: "white",
                         borderColor:"blue",
-                        borderWith:2,
+                        borderWidth:2,
                         pointBorderColor:'rgba(0,0,0,0)',
                         pointHoverBackgroundColor: 'rgba(0,0,0,0)',
                         pointHoverBorderColor:'#5AC53B',

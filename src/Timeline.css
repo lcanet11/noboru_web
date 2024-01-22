@@ -1,0 +1,25 @@
+.timeline__container {
+    display:flex; 
+    border-bottom: 1px solid blueviolet;
+}
+
+.timeline__buttons__container {
+    display:flex; 
+    color: black; 
+}
+
+.timeline__button {
+   font-weight:bold; 
+   padding:10px 10px 20px 10px; 
+   cursor: pointer;
+  color: blueviolet;
+}
+
+.timeline__button:hover {
+    color:blue;
+}
+
+.timeline__button.active {
+    color: blue; 
+    border-bottom: 2px solid blue;
+}

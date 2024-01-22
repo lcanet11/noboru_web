@@ -49,7 +49,7 @@ function Stats() {
   useEffect(()=>{
 
     let tempStocksData = []
-    const stocksList = ["AAPL", "MSFT", "TSLA", "AMZN", "BABA", "UBER", "DIS", "SBUX"];
+    const stocksList = ["AAPL", "MSFT", "TSLA", "AMZN", "BABA", "UBER", "DIS", "SBUX", "SPY", "IWM", "QQQ", "HOG", "BOOM", "FUN"];
 
     getMyStocks();
     let promises = [];
