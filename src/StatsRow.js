@@ -12,7 +12,6 @@ function StatsRow(props) {
   
     }
 
-
   return (
     <div className="row">
         <div className="row__intro">

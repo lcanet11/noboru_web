@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './BuyStocks.css';
 import { db } from './firebase';
 
@@ -31,11 +31,23 @@ function BuyStocks() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    buyStock(ticker, shares);
+    // Set a flag to indicate that the form has been submitted
+    setFormSubmitted(true);
   };
 
   const [ticker, setTicker] = useState('');
   const [shares, setShares] = useState('');
+  const [formSubmitted, setFormSubmitted] = useState(false);
+
+  useEffect(() => {
+    // Use useEffect to handle the asynchronous operation after form submission
+    if (formSubmitted && ticker !== '' && shares !== '') {
+      // Pass state-setting functions to buyStock
+      buyStock(ticker, shares);
+      // Reset the form submission flag
+      setFormSubmitted(false);
+    }
+  }, [formSubmitted, ticker, shares]);
 
   return (
     <main className="buystocks_container">

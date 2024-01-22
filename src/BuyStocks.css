@@ -19,12 +19,14 @@
     width: 200px;
     height: 18px;
     font-weight: bold;    
+    margin-right: 10px; 
 }
 
 .buystocks_shares_bar {
     width: 200px;
     height: 18px;
     font-weight: bold;  
+    margin-right: 10px; 
 }
 
 .buystocks_button {

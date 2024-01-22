@@ -5,6 +5,7 @@ import Timeline from './Timeline'
 import Chip from '@material-ui/core/Chip';
 import { Avatar } from '@material-ui/core';
 import BuyStocks from './BuyStocks';
+import StockTotal from './StockTotal';
 
 
 
@@ -29,7 +30,7 @@ function Newsfeed() {
         <div className="newsfeed__container">
             <div className="newsfeed__chartSection">
                 <div className="newsfeed__portfolio">
-                    <h1>$95,000</h1>
+                    <StockTotal />
                     <p>+$44.23 (+.03%) Today</p>
                 </div>
                 <div className="newsfeed__chart">
