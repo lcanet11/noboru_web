@@ -5,6 +5,7 @@ import Timeline from './Timeline'
 import Chip from '@material-ui/core/Chip';
 import { Avatar } from '@material-ui/core';
 import BuyStocks from './BuyStocks';
+import SellStocks from './SellStocks';
 import StockTotal from './StockTotal';
 
 
@@ -42,14 +43,18 @@ function Newsfeed() {
                 <h2>Buying Power</h2>
                 <h2>$4.11</h2>
             </div>
-            <div className="newsfeed__market__section">
-                <div className="newsfeed__market__box">
-                    <p>Markets Closed</p>
-                    <h1>Happy New Year</h1>
-                </div>
-            </div>
+          
             <div className="newsfeed_chart">
               <BuyStocks />
+            </div>
+            <div className="newsfeed_chart">
+              <SellStocks />
+            </div>
+            <div className="newsfeed__market__section">
+                <div className="newsfeed__market__box">
+                    <p>9:30 AM to 4:00 PM EST</p>
+                    <h1>NYSE TODAY</h1>
+                </div>
             </div>
 
             <div className="newsfeed__popularlists__section">

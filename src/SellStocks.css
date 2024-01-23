@@ -1,0 +1,50 @@
+.sellstocks_container {
+    display:flex; 
+ 
+}
+
+.sellstocks_buttons_container {
+    display:flex; 
+    color: black; 
+    padding-top:10px; 
+}
+
+.sellstocks_action {
+    width: 50px;
+    height: 5px;
+    font-weight: bold;
+}
+
+.sellstocks_search_bar {
+    width: 200px;
+    height: 18px;
+    font-weight: bold;    
+    margin-right: 10px; 
+}
+
+.sellstocks_shares_bar {
+    width: 200px;
+    height: 18px;
+    font-weight: bold;  
+    margin-right: 10px; 
+}
+
+.sellstocks_button {
+    color: white; 
+    background-color: blue;
+    border-radius: 5px;
+    border: 2px solid blue;
+    padding: 0px 10px 20px 5px; 
+    width: 150px;
+    height: 5px;
+    font-weight: bold;
+}
+
+.sellstocks_button:hover {
+    color:rgb(17, 247, 17);
+}
+
+.sellstocks_button.active {
+    color: blue; 
+    border-bottom: 2px solid blue;
+}
