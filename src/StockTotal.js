@@ -4,8 +4,6 @@ import Stats from './Stats';
 
 function StockTotal() {
 
-    
-
   return (
     <div>
         <h1>$95,000</h1>

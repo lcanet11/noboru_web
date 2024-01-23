@@ -7,14 +7,31 @@ function BuyStocks() {
 
   const buyStock = async (ticker, shares) => {
     try {
-      // Add the ticker and shares to the 'myStocks' collection
-      await collectionRef.add({ ticker, shares });
-      console.log('Stock added successfully!');
-      // Reset the input fields after adding the stock
-      setTicker('');
-      setShares('');
+      // Check if the stock with the given ticker already exists
+      const existingStock = await collectionRef.where('ticker', '==', ticker).get();
+
+      if (existingStock.empty) {
+        // If the stock doesn't exist, add it to the 'myStocks' collection
+        await collectionRef.add({ ticker, shares: parseFloat(shares) });
+        console.log('Stock added successfully!');
+        // Reset the input fields after adding the stock
+        setTicker('');
+        setShares('');
+      } else {
+        // If the stock exists, update the shares for that stock
+        const existingDoc = existingStock.docs[0]; // Assuming there's only one matching document
+        const existingShares = parseFloat(existingDoc.data().shares) || 0;
+        const newShares = existingShares + parseFloat(shares);
+
+        // Update the shares for the existing stock
+        await existingDoc.ref.update({ shares: newShares });
+        console.log('Shares added to existing stock successfully!');
+        // Reset the input fields after updating the stock
+        setTicker('');
+        setShares('');
+      }
     } catch (error) {
-      console.error('Error adding stock:', error);
+      console.error('Error adding/updating stock:', error);
     }
   };
 
