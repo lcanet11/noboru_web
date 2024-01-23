@@ -1,6 +1,12 @@
 import React from 'react'
 import Logo from './logo.svg'
+import { Link } from 'react-router-dom'
 import './Header.css'
+// import Portfolio from './Portfolio';
+// import Fintok from './Fintok'; // Import your Fintok component
+// import ETFs from './ETFs';
+// import MutualFunds from './MutualFunds';
+// import Account from './Account';
 
 function Header() {
   return (
@@ -16,7 +22,7 @@ function Header() {
 
         <div className="header__menuItems">
             <a href="#">Portfolio</a>
-            <a href="#">FinTok</a>
+            <a href="#">Fintok</a>
             <a href="#">ETFs</a>
             <a href="#">Mutual Funds</a>
             <a href="#">Account</a>
