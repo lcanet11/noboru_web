@@ -7,7 +7,9 @@ import { Avatar } from '@material-ui/core';
 import BuyStocks from './BuyStocks';
 import SellStocks from './SellStocks';
 import StockTotal from './StockTotal';
-import Personality from './Personality';
+import BuyingPower from './BuyingPower'
+
+import StocksList from './StocksList';
 
 function Newsfeed() {
   const [popularTopics, setTopics] = useState([
@@ -28,14 +30,12 @@ function Newsfeed() {
   return (
     <div className="newsfeed">
         <div className="newsfeed__container">
-        
             <div className="newsfeed__chartSection">
-            <div>
-              <Personality />
-            </div>
+                <br />
                 <div className="newsfeed__portfolio">
+                    {/* <StocksList /> */}
                     <StockTotal />
-                    <p>+$44.23 (+.03%) Today</p>
+                    <p>+$3.24 (+.03%) Today</p>
                 </div>
                 <div className="newsfeed__chart">
                     <LineGraph />
@@ -44,7 +44,7 @@ function Newsfeed() {
             </div>
             <div className="newsfeed__buying__section">
                 <h2>Buying Power</h2>
-                <h2>$4.11</h2>
+                <h2><BuyingPower /></h2>
             </div>
           
             <div className="newsfeed_chart">

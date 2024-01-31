@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import './BuyStocks.css';
 import { db } from './firebase';
+import BuyingPower from './BuyingPower'
 
 function BuyStocks() {
+
   const collectionRef = db.collection('myStocks');
 
   const buyStock = async (ticker, shares) => {
@@ -68,6 +70,8 @@ function BuyStocks() {
 
   return (
     <main className="buystocks_container">
+      {/* <div><BuyingPower /></div> */}
+      <br/>
       <form className="buystocks_buttons_container" onSubmit={handleSubmit}>
         <input
           className="buystocks_search_bar"

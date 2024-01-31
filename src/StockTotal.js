@@ -36,7 +36,8 @@ function StockTotal() {
   const getStocksData = async (stock) => {
     try {
       const response = await axios.get(`${BASE_URL}?symbol=${stock}&token=${TOKEN}`);
-      return response.data.c; // Assuming 'c' represents the closing price
+      return response.data.c; 
+      // 'c' represents the closing price
     } catch (error) {
       console.error("Error", error.message);
       return null;
@@ -49,7 +50,7 @@ function StockTotal() {
 
   return (
     <div>
-      <h1>{totalStocks}</h1>
+      <h1>${totalStocks.toFixed(2)}</h1>
     </div>
   );
 }
