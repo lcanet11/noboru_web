@@ -1,9 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
-import Header from './Header';
-import Newsfeed from './Newsfeed';
-import Stats from './Stats';
-import { CategoryProvider } from './CategoryContext';
+import Header from './Dashboard/Header';
+import Newsfeed from './Dashboard/Newsfeed';
+import Stats from './Dashboard/Stats';
+import { CategoryProvider } from './Dashboard/CategoryContext';
 
 function App() {
   return (

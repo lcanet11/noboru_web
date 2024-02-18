@@ -13,19 +13,34 @@ function Header() {
         </div> 
         <div className="header__search">
             <div className="header__searchContainer">
-                <input placeholder="Search" type="text"/>
+                {/* <input placeholder="Search" type="text"/> */}
+                {/* create dropdown with saver personalities */}
+                <select
+                id="categoryDropdown">
+                  <option id="categoryOption" value="">
+                    Select Category
+                  </option>
+                  <option id="categoryOption" value="Adventurous Saver">
+                    Adventurous Saver
+                  </option>
+                  <option id="categoryOption" value="Balanced Saver">
+                    Balanced Saver
+                  </option>
+                  <option id="categoryOption" value="Cautious Saver">
+                    Cautious Saver
+                  </option>
+                  <option id="categoryOption" value="Fearless Saver">
+                    Fearless Saver
+                  </option>
+                </select>
             </div>
         </div>
-
         <div className="header__menuItems">
             <a href="#">Portfolio</a>
             <a href="#">Fintok</a>
-            <a href="#">ETFs</a>
-            <a href="#">Mutual Funds</a>
+            <a href="#">Analytics</a>
             <a href="#">Account</a>
         </div>
-
-
     </div>
   )
 }
