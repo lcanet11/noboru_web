@@ -1,12 +1,37 @@
 
-import React from 'react'
+import React, {useState} from 'react'
 import Logo from './logo.svg'
 import { Link } from 'react-router-dom'
 import './Header.css'
 import { useCategory } from './CategoryContext';
 
+
 function Header() {
   const { selectedCategory, handleCategoryChange } = useCategory();
+  const { stocksList, setStocksList} = useState([]);
+
+    const dashboardList = (category) => {
+    let updatedStocksList = [];
+
+    switch (category) {
+      case 'Adventurous Saver':
+        updatedStocksList = ["TSLA", "AMZN", "UBER", "BOOM"];
+        break;
+      case 'Balanced Saver':
+        updatedStocksList = ["AAPL", "MSFT", "DIS", "SBUX", "SPY", "IWM", "QQQ"];
+        break;
+      case 'Cautious Saver':
+        updatedStocksList = ["BABA", "DIS", "SPY", "HOG"];
+        break;
+      case 'Fearless Saver':
+        updatedStocksList = ["AAPL", "MSFT", "TSLA", "AMZN", "BABA", "UBER", "DIS", "SBUX", "SPY", "IWM", "QQQ", "HOG", "BOOM", "FUN"];
+        break;
+      default:
+        updatedStocksList = [];
+    }
+
+    setStocksList(updatedStocksList); // Update stocksList state
+  };
 
   return (
     <div className="header__wrapper">
@@ -20,7 +45,7 @@ function Header() {
                 <select
                 placeholder="Select Saver Type"
                 id="categoryDropdown"
-                value="selectedCategory"
+                value={selectedCategory}
                 onChange={(event) => {
                   handleCategoryChange(event);
                 }}>
