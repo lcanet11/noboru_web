@@ -7,12 +7,14 @@ import { useCategory } from './CategoryContext';
 
 
 function Header() {
+  
   const { selectedCategory, handleCategoryChange } = useCategory();
   const { stocksList, setStocksList} = useState([]);
 
-    const dashboardList = (category) => {
+    const updateStocksList = (category) => {
     let updatedStocksList = [];
-
+    stocksList = [];
+    
     switch (category) {
       case 'Adventurous Saver':
         updatedStocksList = ["TSLA", "AMZN", "UBER", "BOOM"];
@@ -48,6 +50,7 @@ function Header() {
                 value={selectedCategory}
                 onChange={(event) => {
                   handleCategoryChange(event);
+                  updateStocksList(event.target.value); // Call the function to update stocksList
                 }}>
                   <option id="categoryOption" value="Adventurous Saver">
                     Adventurous Saver
