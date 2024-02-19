@@ -3,9 +3,11 @@ import React from 'react'
 import Logo from './logo.svg'
 import { Link } from 'react-router-dom'
 import './Header.css'
-// import { useCategory } from './CategoryContext';
+import { useCategory } from './CategoryContext';
 
 function Header() {
+  const { selectedCategory, handleCategoryChange } = useCategory();
+
   return (
     <div className="header__wrapper">
        <div className="header__logo">
@@ -16,10 +18,12 @@ function Header() {
                 {/* <input placeholder="Search" type="text"/> */}
                 {/* create dropdown with saver personalities */}
                 <select
-                id="categoryDropdown">
-                  <option id="categoryOption" value="">
-                    Select Category
-                  </option>
+                placeholder="Select Saver Type"
+                id="categoryDropdown"
+                value="selectedCategory"
+                onChange={(event) => {
+                  handleCategoryChange(event);
+                }}>
                   <option id="categoryOption" value="Adventurous Saver">
                     Adventurous Saver
                   </option>
