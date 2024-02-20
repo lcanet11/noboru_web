@@ -9,11 +9,11 @@ import { useCategory } from './CategoryContext';
 function Header() {
   
   const { selectedCategory, handleCategoryChange } = useCategory();
-  const { stocksList, setStocksList} = useState([]);
+  const [ stocksList, setStocksList ] = useState([]);
+  // setStocksList([]);
 
     const updateStocksList = (category) => {
     let updatedStocksList = [];
-    stocksList = [];
     
     switch (category) {
       case 'Adventurous Saver':
@@ -65,6 +65,12 @@ function Header() {
                     Fearless Saver
                   </option>
                 </select>
+                {selectedCategory && (
+                  <div>
+                  <p id="categoryDescription">Your Saving Personality: {selectedCategory}</p>
+                  {/* You can add further logic or components based on the selected category */}
+                </div>
+                )}
             </div>
         </div>
         <div className="header__menuItems">
