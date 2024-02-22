@@ -3,6 +3,7 @@ import './Stats.css';
 import axios from 'axios';
 import StatsRow from './StatsRow';
 import { db } from './firebase';
+import { useStock } from './StockContextProvider';
 
 const TOKEN="cln4kl1r01qkjffmokcgcln4kl1r01qkjffmokd0";
 const BASE_URL="https://finnhub.io/api/v1/quote";
@@ -10,9 +11,12 @@ const BASE_URL="https://finnhub.io/api/v1/quote";
 const testData = [];
 
 function Stats() {
+// function Stats({stocksList=[]}) {
 
   const [stockData, setstockData] = useState([]); 
   const [myStocks, setMyStocks] = useState([]);
+  const{ stocksList } = useStock();
+  console.log({stocksList});
 
   const getMyStocks = () => {
     db
@@ -46,31 +50,67 @@ function Stats() {
     });
   }
 
-  useEffect(()=>{
-
-    let tempStocksData = []
-    const stocksList = ["AAPL", "MSFT", "TSLA", "AMZN", "BABA", "UBER", "DIS", "SBUX", "SPY", "IWM", "QQQ", "HOG", "BOOM", "FUN"];
+  useEffect(() => {
+    let tempStocksData = [];
 
     getMyStocks();
     let promises = [];
-    stocksList.map((stock) => {
-      promises.push(
-        getStocksData(stock)
-        .then((res) => {
-          console.log({res});
-          tempStocksData.push({
-            name: stock,
-            ...res.data
-          });
-        })
-      )
-    });
+    if (stocksList) {
+        stocksList.forEach(stock => {
+            promises.push(
+                getStocksData(stock)
+                .then(res => {
+                    console.log({ res });
+                    tempStocksData.push({
+                        name: stock,
+                        ...res.data
+                    });
+                })
+            );
+        });
 
-    Promise.all(promises).then(()=>{
-      setstockData(tempStocksData);
-      console.log("tempStocksData", tempStocksData);
-    })
-  }, [])
+        Promise.all(promises).then(() => {
+            setstockData(tempStocksData);
+            console.log("tempStocksData", tempStocksData);
+        });
+    }
+}, [stocksList]); 
+// Note: there is a problem here because of asynchronous state updates in react
+// that prevent new stocklist from mounting 
+//adding stocksList to dependency array ensures it reflects the updated
+// list of stocks based on the selected category 
+
+
+
+
+  // useEffect(()=>{
+
+  //   let tempStocksData = []
+  //   // const stocksList = ["AAPL", "MSFT", "TSLA", "AMZN", "BABA", "UBER", "DIS", "SBUX", "SPY", "IWM", "QQQ", "HOG", "BOOM", "FUN"];
+
+  //   getMyStocks();
+  //   let promises = [];
+  //   if(stocksList){
+  //     stocksList.map((stock) => {
+  //       promises.push(
+  //         getStocksData(stock)
+  //         .then((res) => {
+  //           console.log({res});
+  //           tempStocksData.push({
+  //             name: stock,
+  //             ...res.data
+  //           });
+  //         })
+  //       )
+  //     });
+  
+  //     Promise.all(promises).then(()=>{
+  //       setstockData(tempStocksData);
+  //       console.log("tempStocksData", tempStocksData);
+  //     })
+  //   }
+   
+  // }, [])
 
   return (
     <div className="stats">
