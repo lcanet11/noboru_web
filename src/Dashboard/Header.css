@@ -70,7 +70,8 @@
 }
 
 .header__menuItems a {
-    color:#242472;
+    color: rgb(140,161,169);
+    /* color:#242472; */
     font-weight: bold;
     text-decoration: none;
     padding: 0 10px;

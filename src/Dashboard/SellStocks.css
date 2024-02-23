@@ -30,18 +30,19 @@
 }
 
 .sellstocks_button {
-    color: white; 
-    background-color: blue;
+    color: rgb(132, 74,225); 
     border-radius: 5px;
-    border: 2px solid blue;
+    border: 1px solid rgb(132, 74,225);
     padding: 0px 10px 20px 5px; 
     width: 150px;
-    height: 5px;
+    align-items: center;
+    height: 10px;
     font-weight: bold;
+    font-size:14px;
 }
 
 .sellstocks_button:hover {
-    color:rgb(17, 247, 17);
+    color:blue; 
 }
 
 .sellstocks_button.active {

@@ -39,7 +39,7 @@ function Newsfeed() {
                 </div>
             </div>
             <div className="newsfeed__buying__section">
-                <h2>Buying Power</h2>
+                <h2>Cash Balance</h2>
                 <h2><BuyingPower /></h2>
             </div>
           
@@ -52,11 +52,15 @@ function Newsfeed() {
             <div className="newsfeed__content__section">
                 <div className="newsfeed__content__box">
                     <h3>Content</h3>    
-                    <p className="play-btn">Investing Basics</p>
-                    <p>Evaluating Career Breaks</p>
-                    <p>Investment Strategies for your 30s</p>
-                    <p>Mastering Volatility</p>
-                    <p>Sustainable Investing for Women</p>
+                    <ul>
+                    <li>Investing Basics</li>
+                    <li>Evaluating Career Breaks</li>
+                    <li>Investment Strategies for your 30s</li>
+                    <li>Mastering Volatility</li>
+                    <li>Sustainable Investing for Women</li>
+                    </ul>
+                    
+                  
                 </div>
             </div>
             <div className="newsfeed__market__section">

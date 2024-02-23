@@ -47,6 +47,7 @@
 
   .newsfeed__content__section{ 
     margin-top: 20px; 
+    font-family: 'Haettenschewiler';
    }
  
    .newsfeed__content__box{
@@ -56,6 +57,7 @@
      border-radius: 10px; 
      color:rgb(36, 36, 101); 
      text-align:left; 
+     font-family: Franklin Gothic Medium;
    }
 
   .newsfeed__market__box h3 {
