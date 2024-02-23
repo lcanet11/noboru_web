@@ -72,10 +72,10 @@ function Header() {
             </div>
         </div>
         <div className="header__menuItems">
-            <a href="#">Portfolio</a>
-            <a href="#">Fintok</a>
-            <a href="#">Analytics</a>
-            <a href="#">Account</a>
+            <a href="#">Snapshot</a>
+            <a href="#">Recommended</a>
+            <a href="#">Education</a>
+            <a href="#">Impact</a>
         </div>
           {/* Render the Stats component and pass the stocksList as a prop
           <Stats stocksList={stocksList} /> */}

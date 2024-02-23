@@ -9,7 +9,7 @@
   .stats__container {
     flex-direction: column;
     flex: 1;
-    background-color: rgb(143, 88, 194);
+    background-color: rgb(132, 74,225);
     border-radius: 5px;
     border: 1px solid white;
     color: white; 
@@ -17,7 +17,6 @@
   
   .stats__content {
     font-size: 11px;
-
   }
   
   .stats__header {
@@ -70,5 +69,6 @@
   }
   
   .row__percentage {
-    color: rgb(197, 59, 151)59, 114);
+    color: rgb(132, 74,225);
+    /* color: rgb(197, 59, 151); */
   }

@@ -33,22 +33,38 @@
   }
 
   .newsfeed__market__section{
-   margin-top: 40px; 
+   margin-top: 20px; 
   }
 
   .newsfeed__market__box{
     height: 10vh; 
     padding: 20px; 
     border: 1px solid grey;
-    border-radius: 4px; 
+    border-radius: 10px; 
     color:rgb(36, 36, 101); 
     text-align:left; 
   }
 
+  .newsfeed__content__section{ 
+    margin-top: 20px; 
+   }
+ 
+   .newsfeed__content__box{
+     height: 15vh; 
+     padding: 20px; 
+     border: 1px solid grey;
+     border-radius: 10px; 
+     color:rgb(36, 36, 101); 
+     text-align:left; 
+   }
+
+  .newsfeed__market__box h3 {
+    color: 33404F;
+  }
+
   .newsfeed__market__box p {
-    color: rgb(161, 156, 156);
-    font-size: 15px; 
-    text-transform: uppercase; 
+    color: 979797;
+    font-size: 15px;  
     font-weight:700px; 
     margin-bottom: 8px; 
   }

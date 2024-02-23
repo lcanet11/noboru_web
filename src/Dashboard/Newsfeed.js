@@ -9,20 +9,16 @@ import SellStocks from './SellStocks';
 import StockTotal from './StockTotal';
 import BuyingPower from './BuyingPower'
 
-import StocksList from './StocksList';
 
 function Newsfeed() {
   const [popularTopics, setTopics] = useState([
-    "Technology", 
-    "FinTok",
-    "Upcoming Earnings", 
-    "Crypto",
-    "Cannabis", 
-    "Healthcare Supplies", 
-    "Index Funds",
-    "Mutual Funds", 
-    "China", 
-    "Pharma"
+    "Investing Basics", 
+    "Evaluating Career Breaks",
+    "Term of the Day", 
+    "Stock of the Week",
+    "Mastering Volatility", 
+    "Sustainable Investing for Women", 
+    "What is an ETF?"
   ]);
 
 
@@ -53,17 +49,35 @@ function Newsfeed() {
             <div className="newsfeed_chart">
               <SellStocks />
             </div>
+            <div className="newsfeed__content__section">
+                <div className="newsfeed__content__box">
+                    <h3>Content</h3>    
+                    <p className="play-btn">Investing Basics</p>
+                    <p>Evaluating Career Breaks</p>
+                    <p>Investment Strategies for your 30s</p>
+                    <p>Mastering Volatility</p>
+                    <p>Sustainable Investing for Women</p>
+                </div>
+            </div>
             <div className="newsfeed__market__section">
                 <div className="newsfeed__market__box">
-                    <p>9:30 AM to 4:00 PM EST</p>
-                    <h1>NYSE TODAY</h1>
+                    <h3>Term of the Day</h3>
+                    <br />
+                    <p>Principal: The original amount that you paid for an investment.</p>
+                </div>
+            </div>
+            <div className="newsfeed__market__section">
+                <div className="newsfeed__market__box">
+                    <h3>What is an ETF?</h3>
+                    <br />
+                    <p>By Alia Mohammad</p>
                 </div>
             </div>
 
             <div className="newsfeed__popularlists__section">
           <div className="newsfeed__popularlists__intro">
-            <h1>Popular lists</h1>
             <p>Show More</p>
+            <h1>Popular lists</h1>
           </div>
           <div className="newsfeed_popularlists_badges">
             {popularTopics.map((topic) => (

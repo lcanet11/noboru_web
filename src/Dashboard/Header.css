@@ -16,8 +16,8 @@
     display:flex;
     align-items:center; 
     height:20px; 
-    border: 1px solid rgb(134, 69, 195);
-    background-color: rgb(134, 69, 195);
+    border: 1px solid rgb(132, 74,225);
+    background-color: rgb(132, 74,225);
     border-radius: 5px;
 }
 
@@ -57,7 +57,7 @@
     width: 100%;
     margin-left: 5px;
     margin-right: 5px;
-    border-color:blueviolet;
+    border-color:rgb(132, 74,225);
 }
 
 .header__searchContainer > input:focus { 
@@ -77,6 +77,6 @@
 }
 
 .header__menuItems a:hover{
-    color: blueviolet;
+    color: rgb(132, 74,225);
 }
 
