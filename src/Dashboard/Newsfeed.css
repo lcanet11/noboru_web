@@ -13,14 +13,36 @@
   }
 
   .newsfeed__portfolio h1{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     margin:0; 
-    color:rgb(132,74,225)
+    color:rgb(132,74,225);
+    font-family: Franklin Gothic Medium;
   }
 
   .newsfeed__portfolio p{
     margin-top:0; 
-    color:rgb(140,161,169)
+    color:rgb(140,161,169);
+    font-family: Franklin Gothic Medium;
+  }
+
+  .newsfeed__portfolio__box{
+    float:inline-start;
+    margin-left:5px;
+    margin-right: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px; 
+    height: 5vh; 
+    width: 14vh;
+    padding: 20px; 
+    background-color:white;
+    border-radius: 10px; 
+    color:rgb(140,161,169);
+    text-align:left; 
+    font-family: Franklin Gothic Medium;
+    font-size:smaller;
+  }
+
+  .StockTotalStats {
+    color:rgb(35,179,113);
   }
 
   .newsfeed__buying__section{
@@ -42,34 +64,33 @@
     padding: 20px; 
     border: 1px solid grey;
     border-radius: 10px; 
-    color:rgb(36, 36, 101); 
     text-align:left; 
     margin-bottom:10px; 
+    font-family: Franklin Gothic Medium;
   }
 
   .newsfeed__market__box2{
     float:right;
-    height: 12vh; 
-    width:50vh;
+    height: 13vh; 
+    width:45vh;
     padding: 20px; 
     border: 1px solid grey;
     border-radius: 10px; 
-    color:rgb(36, 36, 101); 
-    text-align:left; 
+    text-align: left;
     margin-bottom:10px; 
+    font-family: Franklin Gothic Medium;
   }
 
   .newsfeed__content__section{ 
     margin-top: 20px; 
-    font-family: 'Haettenschewiler';
+    font-family: Franklin Gothic Medium;
    }
  
    .newsfeed__content__box{
-     height: 24vh; 
+     height: 20vh; 
      padding: 20px; 
      border: 1px solid grey;
      border-radius: 10px; 
-     color:rgb(36, 36, 101); 
      text-align:left; 
      font-family: Franklin Gothic Medium;
    }
@@ -82,17 +103,31 @@
    .newsfeed__content__box p {
     padding-top: 12px;
     width:720px;
+    color:rgb(140,161,169);
+    font-family: Franklin Gothic Medium;
   }
 
+
   .newsfeed__market__box h3 {
-    color: 33404F;
+    color: black;
+    font-family: Franklin Gothic Medium;
   }
 
   .newsfeed__market__box p {
-    color: 979797;
+    color:rgb(140,161,169);
     font-size: 15px;  
     font-weight:700px; 
     margin-bottom: 8px; 
+  }
+
+  .newsfeed__market__box1 p {
+    color:rgb(140,161,169);
+    font-family: Franklin Gothic Medium;
+  }
+
+  .newsfeed__market__box2 p {
+    color:rgb(140,161,169);
+    font-family: Franklin Gothic Medium;
   }
 
   .newsfeed__chart {
@@ -112,5 +147,10 @@
 
   .personality {
     color:black;
+  }
+
+  .artETF {
+    scale:75%;
+    float:left;
   }
 

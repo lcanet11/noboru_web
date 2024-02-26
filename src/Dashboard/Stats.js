@@ -135,7 +135,7 @@ function Stats() {
         </div>
           
           <div className="stats__header">
-            <p>Girls Who Invest Stock Picks</p>
+            <p>Stock Picks</p>
            
           </div>
 
