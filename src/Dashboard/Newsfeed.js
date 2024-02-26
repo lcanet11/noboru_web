@@ -8,7 +8,7 @@ import BuyStocks from './BuyStocks';
 import SellStocks from './SellStocks';
 import StockTotal from './StockTotal';
 import BuyingPower from './BuyingPower'
-
+import PlayButton from '../Images/PlayButton-01.png'
 
 function Newsfeed() {
   const [popularTopics, setTopics] = useState([
@@ -30,8 +30,8 @@ function Newsfeed() {
                 <br />
                 <div className="newsfeed__portfolio">
                     {/* <StocksList /> */}
-                    <StockTotal />
-                    <p>+$3.24 (+.03%) Today</p>
+                    <p>Current Balance</p>
+                    <StockTotal />  
                 </div>
                 <div className="newsfeed__chart">
                     <LineGraph />
@@ -51,16 +51,18 @@ function Newsfeed() {
             </div>
             <div className="newsfeed__content__section">
                 <div className="newsfeed__content__box">
-                    <h3>Content</h3>    
-                    <ul>
-                    <li>Investing Basics</li>
-                    <li>Evaluating Career Breaks</li>
-                    <li>Investment Strategies for your 30s</li>
-                    <li>Mastering Volatility</li>
-                    <li>Sustainable Investing for Women</li>
-                    </ul>
-                    
-                  
+                    <h3>Content</h3>  
+                    <br />
+                    <img className="content" src={PlayButton} alt="Play Button" />
+                    <p className="content">Investing Basics</p>
+                    <img className="content" src={PlayButton} alt="Play Button" />
+                    <p className="content">Evaluating Career Breaks</p>
+                    <img className="content" src={PlayButton} alt="Play Button" />
+                    <p className="content">Investment Strategies for your 30s</p>
+                    <img className="content" src={PlayButton} alt="Play Button" />
+                    <p className="content">Mastering Volatility</p>
+                    <img className="content" src={PlayButton} alt="Play Button" />
+                    <p className="content">Sustainable Investing for Women</p>
                 </div>
             </div>
             <div className="newsfeed__market__section">
@@ -81,7 +83,6 @@ function Newsfeed() {
             <div className="newsfeed__popularlists__section">
           <div className="newsfeed__popularlists__intro">
             <p>Show More</p>
-            <h1>Popular lists</h1>
           </div>
           <div className="newsfeed_popularlists_badges">
             {popularTopics.map((topic) => (

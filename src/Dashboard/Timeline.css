@@ -1,6 +1,6 @@
 .timeline__container {
     display:flex; 
-    border-bottom: 1px solid blueviolet;
+    border-bottom: 1px solid rgb(140, 161, 169);
 }
 
 .timeline__buttons__container {
@@ -12,11 +12,11 @@
    font-weight:bold; 
    padding:10px 10px 20px 10px; 
    cursor: pointer;
-   color: blueviolet;
+   color: rgb(140, 161, 169);
 }
 
 .timeline__button:hover {
-    color:blue;
+    color:rgb(35,179,113);
 }
 
 .timeline__button.active {

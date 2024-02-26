@@ -3,6 +3,7 @@
     align-items: center;
     justify-content: space-between;
     height: 64px;
+    background-color: white;
 }
 
 .header__logo {

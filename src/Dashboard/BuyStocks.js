@@ -23,6 +23,7 @@ function BuyStocks() {
         // If the stock exists, update the shares for that stock
         const existingDoc = existingStock.docs[0]; // Assuming there's only one matching document
         const existingShares = parseFloat(existingDoc.data().shares) || 0;
+        console.log("existingdoc", existingDoc);
         const newShares = existingShares + parseFloat(shares);
 
         // Update the shares for the existing stock
