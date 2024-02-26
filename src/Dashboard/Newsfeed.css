@@ -35,13 +35,28 @@
    margin-top: 20px; 
   }
 
-  .newsfeed__market__box{
-    height: 10vh; 
+  .newsfeed__market__box1{
+    float:left;
+    height: 12vh; 
+    width: 28vh;
     padding: 20px; 
     border: 1px solid grey;
     border-radius: 10px; 
     color:rgb(36, 36, 101); 
     text-align:left; 
+    margin-bottom:10px; 
+  }
+
+  .newsfeed__market__box2{
+    float:right;
+    height: 12vh; 
+    width:50vh;
+    padding: 20px; 
+    border: 1px solid grey;
+    border-radius: 10px; 
+    color:rgb(36, 36, 101); 
+    text-align:left; 
+    margin-bottom:10px; 
   }
 
   .newsfeed__content__section{ 
@@ -50,7 +65,7 @@
    }
  
    .newsfeed__content__box{
-     height: 30vh; 
+     height: 24vh; 
      padding: 20px; 
      border: 1px solid grey;
      border-radius: 10px; 
@@ -60,16 +75,13 @@
    }
 
    .play__button {
-
     padding-top: 10px;
+    float:left;
   }
 
    .newsfeed__content__box p {
-    float:right;
     padding-top: 12px;
     width:720px;
-  
-   
   }
 
   .newsfeed__market__box h3 {

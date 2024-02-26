@@ -66,14 +66,14 @@ function Newsfeed() {
                 </div>
             </div>
             <div className="newsfeed__market__section">
-                <div className="newsfeed__market__box">
+                <div className="newsfeed__market__box1">
                     <h3>Term of the Day</h3>
                     <br />
                     <p>Principal: The original amount that you paid for an investment.</p>
                 </div>
             </div>
             <div className="newsfeed__market__section">
-                <div className="newsfeed__market__box">
+                <div className="newsfeed__market__box2">
                     <h3>What is an ETF?</h3>
                     <br />
                     <p>By Alia Mohammad</p>
@@ -82,8 +82,9 @@ function Newsfeed() {
 
             <div className="newsfeed__popularlists__section">
           <div className="newsfeed__popularlists__intro">
-            <p>Show More</p>
+            <p></p>
           </div>
+          
           <div className="newsfeed_popularlists_badges">
             {popularTopics.map((topic) => (
               <Chip 
