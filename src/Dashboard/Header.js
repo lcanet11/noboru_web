@@ -50,6 +50,9 @@ function Header() {
                   handleCategoryChange(event);
                   updateStocksList(event.target.value); // Call the function to update stocksList
                 }}>
+                  <option value="" disabled selected>
+                  Select Saver Type
+                  </option>
                   <option id="categoryOption" value="Adventurous Saver">
                     Adventurous Saver
                   </option>

@@ -50,7 +50,7 @@
    }
  
    .newsfeed__content__box{
-     height: 24vh; 
+     height: 30vh; 
      padding: 20px; 
      border: 1px solid grey;
      border-radius: 10px; 
@@ -59,10 +59,17 @@
      font-family: Franklin Gothic Medium;
    }
 
+   .play__button {
+
+    padding-top: 10px;
+  }
+
    .newsfeed__content__box p {
     float:right;
-    width:760px;
-    margin-top: 5px;
+    padding-top: 12px;
+    width:720px;
+  
+   
   }
 
   .newsfeed__market__box h3 {

@@ -53,15 +53,15 @@ function Newsfeed() {
                 <div className="newsfeed__content__box">
                     <h3>Content</h3>  
                     <br />
-                    <img className="content" src={PlayButton} alt="Play Button" />
+                    <img className="play__button" src={PlayButton} alt="Play Button" />
                     <p className="content">Investing Basics</p>
-                    <img className="content" src={PlayButton} alt="Play Button" />
+                    <img className="play__button" src={PlayButton} alt="Play Button" />
                     <p className="content">Evaluating Career Breaks</p>
-                    <img className="content" src={PlayButton} alt="Play Button" />
+                    <img className="play__button" src={PlayButton} alt="Play Button" />
                     <p className="content">Investment Strategies for your 30s</p>
-                    <img className="content" src={PlayButton} alt="Play Button" />
+                    <img className="play__button" src={PlayButton} alt="Play Button" />
                     <p className="content">Mastering Volatility</p>
-                    <img className="content" src={PlayButton} alt="Play Button" />
+                    <img className="play__button" src={PlayButton} alt="Play Button" />
                     <p className="content">Sustainable Investing for Women</p>
                 </div>
             </div>
