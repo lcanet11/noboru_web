@@ -15,16 +15,16 @@ function Header() {
     let updatedStocksList = [];
     switch (category) {
       case 'Adventurous Saver':
-        updatedStocksList = ["TSLA", "AMZN", "UBER", "BOOM"];
+        updatedStocksList = ["ISRG","BRKB","AAPL","FSELX","VOO","SPY","F","CRISPR","SAVA","TSLA","META","NVDIA","QQQ"];
         break;
       case 'Balanced Saver':
-        updatedStocksList = ["AAPL", "MSFT", "DIS", "SBUX", "SPY", "IWM", "QQQ"];
+        updatedStocksList = ["AAPL", "JNJ", "AMZN", "PEP", "SPY", "BRKB", "NVDIA","AMD","SPY","VOO","FSELX","CHAT","T","ONEQ","INTC"];
         break;
       case 'Cautious Saver':
-        updatedStocksList = ["BABA", "DIS", "SPY", "HOG"];
+        updatedStocksList = ["ADBE", "GOOG", "NVDIA", "BRKB","SPY","VOO","FDVV","FDRV","T","ONEQ","FDLO","PEP","MCD","AAPL"];
         break;
       case 'Fearless Saver':
-        updatedStocksList = ["AAPL", "MSFT", "TSLA", "AMZN", "BABA", "UBER", "DIS", "SBUX", "SPY", "IWM", "QQQ", "HOG", "BOOM", "FUN"];
+        updatedStocksList = ["QQQ", "AUR", "AVDL", "GM", "WOOF", "ACHR", "SPY", "VOO", "NVDIA", "FSELX", "CLPT"];
         break;
       default:
         updatedStocksList = [];
@@ -36,7 +36,7 @@ function Header() {
   return (
     <div className="header__wrapper">
        <div className="header__logo">
-            <img src={Logo} width={50}/>    
+            <img src={Logo} width={50} alt="logo"/>    
         </div> 
         <div className="header__search">
             <div className="header__searchContainer">

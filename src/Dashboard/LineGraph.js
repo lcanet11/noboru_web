@@ -12,22 +12,22 @@ function LineGraph() {
 
     const [graphData, setGraphData ] = useState([]);
 
-    const sample_data = {
-        "Labels": [
-            'March',
-            'April',
-            'May',
-            'June',
-            'July'
-        ],
-        "Values": [
-            5,
-            12,
-            15,
-            26,
-            21
-        ]
-    };
+    // const sample_data = {
+    //     "Labels": [
+    //         'March',
+    //         'April',
+    //         'May',
+    //         'June',
+    //         'July'
+    //     ],
+    //     "Values": [
+    //         5,
+    //         12,
+    //         15,
+    //         26,
+    //         21
+    //     ]
+    // };
 
     const createMockData = () => {
         let data = [];

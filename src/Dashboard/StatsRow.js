@@ -8,9 +8,13 @@ function StatsRow(props) {
     //Current price - open price divided by open price * 100 
     const percentage = (((props.price - props.openPrice)/props.openPrice) * 100).toFixed(2);
 
-    const getModal = () => {
+  //   if (!props || !props.name || !props.volume || !props.price || !props.openPrice) {
+  //     return null;
+  // }
+
+    // const getModal = () => {
   
-    }
+    // }
 
   return (
     <div className="row">

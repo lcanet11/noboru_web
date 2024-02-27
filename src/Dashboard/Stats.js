@@ -27,11 +27,13 @@ function Stats() {
         snapshot.docs.map((doc) => {
           promises.push(getStocksData(doc.data().ticker)
           .then(res => {
-            tempData.push({
-              id: doc.id,
-              data: doc.data(),
-              info: res.data,
-            })
+            if(res && res.data){
+              tempData.push({
+                id: doc.id,
+                data: doc.data(),
+                info: res.data,
+              })
+            }
           })
         )})
         Promise.all(promises).then(()=>{
@@ -60,11 +62,13 @@ function Stats() {
             promises.push(
                 getStocksData(stock)
                 .then(res => {
-                    console.log({ res });
+                    if (res && res.data){
+                      console.log({ res });
                     tempStocksData.push({
                         name: stock,
                         ...res.data
                     });
+                    }
                 })
             );
         });
